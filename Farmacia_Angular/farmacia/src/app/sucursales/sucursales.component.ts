@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class SucursalesComponent implements OnInit {
 
   sucursales: Sucursal[] = [];
-
+ 
   constructor(private sucursalService: SucursalService, private router:Router) { }
 
   ngOnInit(): void {

@@ -1,11 +1,26 @@
-<div style="text-align: center">
-    <!-- <button style="cursor: pointer" (click)="agregar()">+</button> -->
-  </div>
-  <div class="box">
-      <app-sucursal
-        *ngFor="let sucursalElemento of  sucursales; let i = index"
-        [sucursal]="sucursalElemento"
-        [indice]="i"
-      >
-      </app-sucursal>
-    </div>
+<app-cabecero></app-cabecero>
+<div id="heading" style="text-align: center">
+  <!-- <button style="cursor: pointer" (click)="agregar()">+</button> -->
+  <h1>Listado de Sucursales</h1>
+</div>
+<!-- <table border="1" style="margin: 0 auto" class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre y Apellido</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Domicilio</th>
+    </tr>
+  </thead> -->
+  <app-sucursal
+    *ngFor="let sucursalElemento of sucursales; let i = index"
+    [sucursal]="sucursalElemento"
+    [indice]="i"
+  >
+  </app-sucursal>
+<!-- </table> -->
+ 
+   <app-footer></app-footer>  
+  

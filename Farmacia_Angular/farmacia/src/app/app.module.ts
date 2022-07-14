@@ -15,6 +15,13 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './dataService';
 import { SucursalesComponent } from './sucursales/sucursales.component';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { ProductosComponent } from './productos/productos.component';
+import { CabeceroComponent } from './cabecero/cabecero.component';
+import { CuerpoComponent } from './cuerpo/cuerpo.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { FooterComponent } from './footer/footer.component';
+import { ErrorComponent } from './error/error.component';
  
 
 @NgModule({
@@ -26,7 +33,14 @@ import { SucursalesComponent } from './sucursales/sucursales.component';
     PedidoComponent,
     CategoriaComponent,
     LoginComponent,
-    SucursalesComponent
+    SucursalesComponent,
+    CategoriasComponent,
+    ProductosComponent,
+    CabeceroComponent,
+    CuerpoComponent,
+    InicioComponent,
+    FooterComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

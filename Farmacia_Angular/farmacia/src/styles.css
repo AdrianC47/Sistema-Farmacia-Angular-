@@ -55,6 +55,19 @@ html {
     margin-left: 20px;
   }
   
+  .miBoton {
+    width: auto;
+ 
+    color: black;
+    text-transform: uppercase;
+    background-color: antiquewhite;
+    cursor: pointer;
+  
+  }
+  .miBoton:hover{
+    background-color: #3F51B5;
+  }
+  
   button {
     min-height: 50px;
     width: 50px;

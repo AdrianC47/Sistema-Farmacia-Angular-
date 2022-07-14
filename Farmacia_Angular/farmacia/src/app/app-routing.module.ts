@@ -2,11 +2,24 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SucursalComponent } from './sucursal/sucursal.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
+import { CabeceroComponent } from './cabecero/cabecero.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ErrorComponent } from './error/error.component';
 
 
 //declaro la variable
 const routes: Routes = [
-  { path: '', component: SucursalesComponent },
+  { path: '', component: InicioComponent },
+  { path: 'Sucursales', component: SucursalesComponent },
+  { path: 'Categorias', component: CategoriasComponent },
+  { path: 'producto', component:ProductosComponent, children:[
+    {path:'categoria', component:ProductosComponent},
+    {path:':sucursal', component:ProductosComponent}
+  ]
+},
+{ path: '**',component: ErrorComponent}
   
 ]
 @NgModule({
