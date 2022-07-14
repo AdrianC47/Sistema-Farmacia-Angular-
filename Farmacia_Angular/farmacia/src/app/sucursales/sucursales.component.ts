@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Sucursal } from '../sucursal/sucursal.model';
-import { SucursalService } from '../sucursalService';
+import { SucursalService } from './sucursalService';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,7 +19,7 @@ export class SucursalesComponent implements OnInit {
     ((sucursales: Sucursal[]) => {
         this.sucursales=sucursales;
         this.sucursalService.setSucursales(this.sucursales);
-        console.log("obtener sucursales suscriber:" + this.sucursales);
+        console.log("obtener sucursales subscriber:" + this.sucursales);
       }
     )
   }

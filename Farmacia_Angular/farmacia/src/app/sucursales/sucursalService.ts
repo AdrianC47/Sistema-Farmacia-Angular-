@@ -1,7 +1,7 @@
-import { Sucursal } from './sucursal/sucursal.model';
-import { LoggingService } from './LoggingService.service';
+import { Sucursal } from '../sucursal/sucursal.model';
+import { LoggingService } from '../LoggingService.service';
 import { Injectable, EventEmitter } from '@angular/core';
-import { DataService } from './dataService';
+import { DataService } from '../dataService';
 
 
 @Injectable() //esta anotacion se usa para indicar que voy a inyectar un servicio dentro de otro

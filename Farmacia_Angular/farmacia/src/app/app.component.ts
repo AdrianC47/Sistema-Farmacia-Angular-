@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Sucursal } from './sucursal/sucursal.model';
 import { HttpClient } from '@angular/common/http';
-import { SucursalService } from './sucursalService';
+import { SucursalService } from './sucursales/sucursalService';
 import { Observable } from 'rxjs';
 import { LoggingService } from './LoggingService.service';
 import { DataService } from './dataService';

@@ -13,7 +13,8 @@ export class CabeceroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  irASucursales(){
-      this.router.navigate(["Sucursales"])
-  }
+  irASucursales(){this.router.navigate(["Sucursales"])}
+  irACategorias(){this.router.navigate(["Categorias"])}
+  irAProductos(){this.router.navigate(["Productos"])}
+  
 }

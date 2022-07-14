@@ -1,1 +1,15 @@
-<p>categorias works!</p>
+<app-cabecero></app-cabecero>
+<div id="heading" style="text-align: center">
+  <h1>Listado de Categorias</h1>
+</div>
+
+<div *ngFor="let categoria of categorias; let i = index">
+  <ul>
+    <li>
+      <a> ID: {{ categoria.id }}</a>
+      <a> Nombre: {{ categoria.nombre }}</a>
+    </li>
+  </ul>
+</div>
+
+<app-footer></app-footer>

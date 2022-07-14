@@ -13,6 +13,24 @@ export class DataService {
         
     }
 
+    cargarCategorias():Observable<any>{
+        console.log(this.httpClient.get('http://localhost:8080/categorias'))
+        return this.httpClient.get('http://localhost:8080/categorias');
+        
+    }
+    
+    cargarProductos():Observable<any>{
+        console.log(this.httpClient.get('http://localhost:8080/producto/'))
+        return this.httpClient.get('http://localhost:8080/producto/');
+        
+    }
+
+    cargarProductosporSucursal(sucursal:String):Observable<any>{
+        console.log(this.httpClient.get('http://localhost:8080/producto/'+sucursal))
+        return this.httpClient.get('http://localhost:8080/producto/'+sucursal);
+        
+    }
+
     // //Guarda todo el arreglo de personas 
     // guardarSucursales(sucursales: Sucursal[]) {
     //     this.httpClient.put('https://listado-personas.firebaseio.com/datos.json', sucursales)

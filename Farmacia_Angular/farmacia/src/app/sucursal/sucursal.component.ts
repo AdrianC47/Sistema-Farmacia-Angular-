@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Sucursal } from './sucursal.model';
 
-import { SucursalService } from '../sucursalService';
+import { SucursalService } from '../sucursales/sucursalService';
 
 @Component({
   selector: 'app-sucursal',

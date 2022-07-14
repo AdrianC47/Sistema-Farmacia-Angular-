@@ -1,1 +1,18 @@
-<p>producto works!</p>
+<app-cabecero></app-cabecero>
+<div id="heading" style="text-align: center">
+  <h1>Listado de Productos</h1>
+</div>
+
+<div *ngFor="let producto of productos; let i = index">
+  <ul>
+    <li>
+      <a> ID: {{ producto.id }}</a>
+      <a> Descripcion: {{ producto.descripcion}}</a>
+      <a> Nombre: {{ producto.nombre }}</a>
+      <a> Precio: {{ producto.precio}}$</a>
+      <a> Categoria ID: {{ producto.categoria.id}}</a>
+    </li>
+  </ul>
+</div>
+
+<app-footer></app-footer>
