@@ -1,7 +1,37 @@
  
 <link rel="icon" type="image/x-icon" href="../../cruz.ico">
+ 
 <div class="item">
-    <input type="checkbox" (click)="emitirSaludo()" />  
-    <p>{{  indice +1  }}:   {{ sucursal.nombreClave  }} {{ sucursal.direccion  }}</p>
+  <ul>
+    <li><!--routerLink es propio de angular y similar al  href, 
+    en el queryParams el modoEdicion es 1 si estamos editando y 0 si vamos a agregar -->
+
+ 
+     {{sucursal.id}} {{sucursal.nombreClave}} {{sucursal.direccion}} {{sucursal.telefono}} {{sucursal.latitud}} {{sucursal.longitud}}
+
+  </li> 
+  </ul>
 </div>
 
+  <!-- <table border="1" style="margin: 0 auto" class="table table-bordered">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Direccion</th>
+         <th scope="col">Telefono</th>
+         <th scope="col">Latitud</th>
+        <th scope="col">Longitud</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+         <td>{{persona.id}}</td>
+        <td>{{persona.nombre}} {{persona.apellido}}</td>
+        <td>{{persona.email}}</td>
+        <td>{{persona.telefono}}</td>
+        <td>{{persona.edad}}</td>
+        <td>{{persona.domicilio.calle}}</td> 
+    </tr>
+    </tbody>
+</table> -->

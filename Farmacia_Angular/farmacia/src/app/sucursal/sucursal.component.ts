@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Sucursal } from './sucursal.model';
- 
-import { SucursalService } from './sucursalService';
+
+import { SucursalService } from '../sucursalService';
 
 @Component({
   selector: 'app-sucursal',
@@ -10,17 +10,15 @@ import { SucursalService } from './sucursalService';
 })
 export class SucursalComponent   {
 
-  @Input() sucursal:Sucursal;
+  @Input() sucursal: Sucursal;
   @Input() indice: number;
 
 
 
-  constructor(private sucursalService:SucursalService) { }
+  constructor(private sucursalService: SucursalService) { }
 
   ngOnInit(): void {
-  }
-  emitirSaludo(){
-    this.sucursalService.saludar.emit(this.indice);
-  }
 
+  }
 }
+

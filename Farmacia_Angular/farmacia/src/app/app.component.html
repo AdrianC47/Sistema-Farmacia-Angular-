@@ -1,13 +1,9 @@
 
-<div class="box" id="heading">
-  <h1>Bienvenido:{{titulo}} </h1>
+<div  id="heading">
+  <h1>Bienvenido a  {{titulo}} </h1>
 </div>
-<div class="box"> 
+ 
   <link rel="icon" type="image/x-icon" href="../cruz.ico">
-  <app-sucursal
-    *ngFor="let sucursalElemento of sucursales; let i=index"
-    [sucursal]="sucursalElemento"
-    [indice]="i"
-    > 
-  </app-sucursal>
-</div>
+ 
+  <router-outlet></router-outlet>
+ 
