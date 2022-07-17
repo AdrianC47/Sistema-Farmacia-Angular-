@@ -1,23 +1,12 @@
 <link rel="icon" type="image/x-icon" href="../../cruz.ico" />
 
 <ul>
-
   <li>
-    <a> ID: {{ sucursal.id }}</a>
-    <a   [routerLink]="['/personas',indice]" [queryParams]="{modoEdicion:'1'}"> Nombre: {{ sucursal.nombreClave }}</a>
-    <a> Direccion: {{ sucursal.direccion }}</a>
-    <a> Telefono: {{ sucursal.telefono }}</a>
-    <a> Latitud: {{ sucursal.latitud }}</a>
-    <a> Longitud: {{ sucursal.longitud }}</a>
+    <a [routerLink]="['/producto',sucursal.nombreClave]"
+    >
+  
+      ID: {{ sucursal.id }} Nombre : {{ sucursal.nombreClave }} Direccion:
+      {{ sucursal.direccion }} Telefono: {{ sucursal.telefono }} Latitud:
+      {{ sucursal.latitud }} Longitud: {{ sucursal.longitud }}</a>
   </li>
 </ul>
-
-<!--     
- 
-    <tr>
-        <td>{{sucursal.nombreClave}}
-          
-        </td>
- 
-        
-    </tr> -->

@@ -7,29 +7,37 @@ import { Sucursal } from './sucursal/sucursal.model';
 export class DataService {
     constructor(private httpClient: HttpClient) { }
 
-    cargarSucursales():Observable<any>{
+    cargarSucursales(): Observable<any> {
         console.log(this.httpClient.get('http://localhost:8080/sucursales'))
         return this.httpClient.get('http://localhost:8080/sucursales');
-        
+
     }
 
-    cargarCategorias():Observable<any>{
+    cargarCategorias(): Observable<any> {
         console.log(this.httpClient.get('http://localhost:8080/categorias'))
         return this.httpClient.get('http://localhost:8080/categorias');
-        
-    }
-    
-    cargarProductos():Observable<any>{
-        console.log(this.httpClient.get('http://localhost:8080/producto/'))
-        return this.httpClient.get('http://localhost:8080/producto/');
-        
+
     }
 
-    cargarProductosporSucursal(sucursal:String):Observable<any>{
-        console.log(this.httpClient.get('http://localhost:8080/producto/'+sucursal))
-        return this.httpClient.get('http://localhost:8080/producto/'+sucursal);
-        
+    cargarProductos(): Observable<any> {
+        console.log(this.httpClient.get('http://localhost:8080/producto/'))
+        console.log('pepe')
+        return this.httpClient.get('http://localhost:8080/producto/');
+
     }
+
+    cargarProductosporSucursal(sucursal: string): Observable<any> {
+        console.log(this.httpClient.get('http://localhost:8080/producto/' + sucursal))
+        console.log('objeto en get' + sucursal)
+        return this.httpClient.get('http://localhost:8080/producto/' + sucursal);
+
+    }
+
+    // cargarProductosporSucursal(sucursal:string):Observable<any>{
+    //     console.log(this.httpClient.get('http://localhost:8080/producto/'+sucursal))
+    //     return this.httpClient.get('http://localhost:8080/producto/'+sucursal);
+
+    // }
 
     // //Guarda todo el arreglo de personas 
     // guardarSucursales(sucursales: Sucursal[]) {

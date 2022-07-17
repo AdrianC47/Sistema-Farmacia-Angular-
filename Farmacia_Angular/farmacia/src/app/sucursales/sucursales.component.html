@@ -17,6 +17,7 @@
   <app-sucursal
     *ngFor="let sucursalElemento of sucursales; let i = index"
     [sucursal]="sucursalElemento"
+    [nombreSucursal]="sucursalElemento.nombreClave"
     [indice]="i"
   >
   </app-sucursal>

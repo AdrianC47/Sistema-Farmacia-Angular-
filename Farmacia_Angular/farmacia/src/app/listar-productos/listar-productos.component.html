@@ -1,0 +1,17 @@
+<app-cabecero></app-cabecero>
+<div id="heading" style="text-align: center">
+  <h1>Listado de Productos por Sucursal</h1>
+</div>
+<div *ngFor="let producto of productos; let i = index">
+  <ul>
+    <li>
+      <a> ID: {{ producto.id }}</a>
+      <a> Stock: {{ producto.stock}}</a>
+      <a> Producto : {{ producto.producto.nombre }}</a>
+      <a> Sucursal : {{ nombreSucursal }}</a>
+  
+    </li>
+  </ul>
+ 
+</div>
+<app-footer></app-footer>

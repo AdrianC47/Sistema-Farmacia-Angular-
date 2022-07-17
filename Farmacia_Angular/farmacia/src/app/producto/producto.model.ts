@@ -1,5 +1,5 @@
 import { Categoria } from '../categorias/categoria.model';
 export class Producto {
 
-    constructor(public id: number, public descripcion: String, public nombre: String, public precio: number, public categoria: Categoria) { }
+    constructor(public id: number, public descripcion: string, public nombre: string, public precio: number, public categoria: Categoria) { }
 }

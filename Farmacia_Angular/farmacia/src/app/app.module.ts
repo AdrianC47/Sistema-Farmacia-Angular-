@@ -22,6 +22,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ErrorComponent } from './error/error.component';
 import { CategoriaService } from './categorias/categoriaService';
 import { ProductoService } from './producto/productoService';
+import { ListarProductosComponent } from './listar-productos/listar-productos.component';
+import { ProductoSucursalService } from './listar-productos/productoSucursalservice';
  
 
 @NgModule({
@@ -38,7 +40,8 @@ import { ProductoService } from './producto/productoService';
     CuerpoComponent,
     InicioComponent,
     FooterComponent,
-    ErrorComponent
+    ErrorComponent,
+    ListarProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { ProductoService } from './producto/productoService';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [SucursalService,LoggingService, DataService, CategoriaService, ProductoService ],// se añade aqui mi proveedor de mi servicio para no estar añadiendo en cada clase
+  providers: [SucursalService,LoggingService, DataService, CategoriaService, ProductoService, ProductoSucursalService ],// se añade aqui mi proveedor de mi servicio para no estar añadiendo en cada clase
   bootstrap: [AppComponent]
 })
 export class AppModule { }

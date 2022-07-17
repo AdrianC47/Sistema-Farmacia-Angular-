@@ -12,6 +12,7 @@ export class SucursalComponent   {
 
   @Input() sucursal: Sucursal;
   @Input() indice: number;
+  @Input() nombreSucursal: string;
 
 
 

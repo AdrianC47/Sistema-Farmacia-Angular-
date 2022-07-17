@@ -7,6 +7,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ErrorComponent } from './error/error.component';
 import { ProductoComponent } from './producto/producto.component';
+import { ListarProductosComponent } from './listar-productos/listar-productos.component';
 
 
 //declaro la variable
@@ -14,14 +15,15 @@ const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'Sucursales', component: SucursalesComponent },
   { path: 'Categorias', component: CategoriasComponent },
-  { path: 'Productos', component:ProductoComponent, children:[
-    {path:'categoria', component:ProductoComponent},
-    {path:':sucursal', component:ProductoComponent}
-  ]
-},
-{ path: '**',component: ErrorComponent}
-  
+  {
+    path: 'producto', component: ProductoComponent, children: [
+      { path: 'categoria', component: ProductoComponent },
+    ]
+  },
+  { path: 'producto/:sucursal', component: ListarProductosComponent },
+  //  { path: '**', component: ErrorComponent }
 ]
+
 @NgModule({
   // declarations: [], se quitan las declaraciones y se dejan los imports
   imports: [RouterModule.forRoot(

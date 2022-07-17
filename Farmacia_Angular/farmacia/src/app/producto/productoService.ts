@@ -17,7 +17,5 @@ export class ProductoService{
         return this.dataService.cargarProductos();
     }
 
-    obtenerProductosporSucursal(sucursal: String){
-        return this.dataService.cargarProductosporSucursal(sucursal);
-    }
+
 }

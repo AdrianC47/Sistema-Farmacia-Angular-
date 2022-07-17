@@ -15,6 +15,7 @@ export class SucursalesComponent implements OnInit {
   constructor(private sucursalService: SucursalService, private router:Router) { }
 
   ngOnInit(): void {
+
     this.sucursalService.obtenerSucursales().subscribe
     ((sucursales: Sucursal[]) => {
         this.sucursales=sucursales;
