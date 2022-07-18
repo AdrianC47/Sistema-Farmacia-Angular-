@@ -16,14 +16,11 @@ export class ProductoSucursalService {
     }
 
     obtenerProductosSucursal(nombreSucursal: string) {
-        // let producto: ProductoSucursal;
-        // this.productos.forEach(objeto => {
-        //     if(objeto.Sucursal.nombreClave == nombreSucursal){
-        //     producto=objeto;
-        //     }
-        // });
-        // return producto;
         return this.dataService.cargarProductosporSucursal(nombreSucursal);
+    }
+
+    obtenerProductosCategoria(nombreSucursal: string,nombreCategoria: string){
+        return this.dataService.cargarProductosporCategoria(nombreSucursal,nombreCategoria);
     }
 
 

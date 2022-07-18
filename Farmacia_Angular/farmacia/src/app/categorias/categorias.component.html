@@ -3,13 +3,30 @@
   <h1>Listado de Categorias</h1>
 </div>
 
-<div *ngFor="let categoria of categorias; let i = index">
-  <ul>
-    <li>
-      <a> ID: {{ categoria.id }}</a>
-      <a> Nombre: {{ categoria.nombre }}</a>
-    </li>
-  </ul>
-</div>
+ 
+<div style=" display:block;margin-left: auto; margin-right: auto;text-align: center;">
+  <h3>Listado de Sucursales </h3>
+<select [(ngModel)]="nombreSucursal"  style="margin-left: 20px">
+  <option value="0">Selecciona una opción</option>
+  <option *ngFor="let sucursal of sucursales; let i = index">
+    {{sucursal.nombreClave}}
+  </option>
 
+</select>
+<hr style="color:aqua;width: 50%; margin-left: auto; margin-right: auto; height: 5px;">
+ 
+  <h3>Listado de  Categorias</h3>
+  <select [(ngModel)]="categoria"  style="margin-left: 20px">
+    <option value="0">Selecciona una opción</option>
+    <option *ngFor="let categoria of categorias; let i = index">
+      {{ categoria.nombre }}
+    </option>
+   
+  </select>
+  <hr style="color:aqua;width: 50%; margin-left: auto; margin-right: auto; height: 5px;">
+  <button [routerLink]="['/producto/categoria',nombreSucursal,categoria]" style="display:block;margin-left: auto; margin-right: auto; width: 150px;">Consultar</button> 
+
+</div>
+<br>
+ 
 <app-footer></app-footer>

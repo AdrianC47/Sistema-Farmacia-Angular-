@@ -8,19 +8,17 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { ErrorComponent } from './error/error.component';
 import { ProductoComponent } from './producto/producto.component';
 import { ListarProductosComponent } from './listar-productos/listar-productos.component';
+import { ListarProdCatComponent } from './listar-prod-cat/listar-prod-cat.component';
 
 
 //declaro la variable
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'Sucursales', component: SucursalesComponent },
-  { path: 'Categorias', component: CategoriasComponent },
-  {
-    path: 'producto', component: ProductoComponent, children: [
-      { path: 'categoria', component: ProductoComponent },
-    ]
-  },
+  { path: 'categorias', component: CategoriasComponent },
+  { path: 'producto', component: ProductoComponent },
   { path: 'producto/:sucursal', component: ListarProductosComponent },
+  { path: 'producto/categoria/:sucursal/:categoria', component: ListarProdCatComponent },
   //  { path: '**', component: ErrorComponent }
 ]
 

@@ -14,8 +14,8 @@ export class DataService {
     }
 
     cargarCategorias(): Observable<any> {
-        console.log(this.httpClient.get('http://localhost:8080/categorias'))
-        return this.httpClient.get('http://localhost:8080/categorias');
+        console.log(this.httpClient.get('http://localhost:8080/categoria'))
+        return this.httpClient.get('http://localhost:8080/categoria');
 
     }
 
@@ -30,9 +30,13 @@ export class DataService {
         console.log(this.httpClient.get('http://localhost:8080/producto/' + sucursal))
         console.log('objeto en get' + sucursal)
         return this.httpClient.get('http://localhost:8080/producto/' + sucursal);
-
     }
 
+    cargarProductosporCategoria(sucursal:string, categoria: string): Observable<any>{
+        console.log(this.httpClient.get('http://localhost:8080/producto/categoria/'+sucursal+'/'+categoria))
+        console.log('sucursal y categoria en get' +sucursal+ categoria)
+        return this.httpClient.get('http://localhost:8080/producto/categoria/'+sucursal+'/'+categoria);
+    }
     // cargarProductosporSucursal(sucursal:string):Observable<any>{
     //     console.log(this.httpClient.get('http://localhost:8080/producto/'+sucursal))
     //     return this.httpClient.get('http://localhost:8080/producto/'+sucursal);

@@ -14,7 +14,7 @@ export class ListarProductosComponent implements OnInit {
   @Input() producto: ProductoSucursal;
   nombreSucursal: string;
   index: number;
-  constructor(private productoSucursalService: ProductoSucursalService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private productoSucursalService: ProductoSucursalService,  private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.nombreSucursal = this.route.snapshot.params['sucursal']
@@ -27,10 +27,6 @@ export class ListarProductosComponent implements OnInit {
         }
       )
     }
-    //   let producto: ProductoSucursal = this.productoSucursalService.obtenerProductosSucursal(this.nombreSucursal)
-    //   console.log(producto.stock + "22");
-      //et producto: ProductoSucursal = 
-      //console.log(producto);
     }
  
 }

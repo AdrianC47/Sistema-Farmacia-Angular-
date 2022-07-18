@@ -24,6 +24,7 @@ import { CategoriaService } from './categorias/categoriaService';
 import { ProductoService } from './producto/productoService';
 import { ListarProductosComponent } from './listar-productos/listar-productos.component';
 import { ProductoSucursalService } from './listar-productos/productoSucursalservice';
+import { ListarProdCatComponent } from './listar-prod-cat/listar-prod-cat.component';
  
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ProductoSucursalService } from './listar-productos/productoSucursalserv
     InicioComponent,
     FooterComponent,
     ErrorComponent,
-    ListarProductosComponent
+    ListarProductosComponent,
+    ListarProdCatComponent
   ],
   imports: [
     BrowserModule,

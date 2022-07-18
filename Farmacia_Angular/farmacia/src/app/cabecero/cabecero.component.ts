@@ -14,7 +14,7 @@ export class CabeceroComponent implements OnInit {
   }
 
   irASucursales(){this.router.navigate(["Sucursales"])}
-  irACategorias(){this.router.navigate(["Categorias"])}
+  irACategorias(){this.router.navigate(["categorias"])}
   irAProductos(){this.router.navigate(["producto"])}
   
 }
