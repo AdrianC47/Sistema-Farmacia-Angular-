@@ -7,14 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./cabecero.component.css']
 })
 export class CabeceroComponent implements OnInit {
-
+ 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+  
   }
 
   irASucursales(){this.router.navigate(["Sucursales"])}
   irACategorias(){this.router.navigate(["categorias"])}
   irAProductos(){this.router.navigate(["producto"])}
-  
+  irAFormasDePago(){
+
+    let usuario= sessionStorage.getItem('Usuario');
+    this.router.navigate(["FormasDePago",usuario])
+  }
+  irAInicio(){this.router.navigate(["Inicio"])}
+  CerrarSesion(){
+    this.router.navigate(["producto"])
+  }
 }

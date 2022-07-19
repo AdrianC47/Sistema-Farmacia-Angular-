@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { SucursalComponent } from './sucursal/sucursal.component';
 import { SucursalService } from './sucursales/sucursalService';
 import { FormsModule } from '@angular/forms';
-import { LoggingService } from './LoggingService.service';
 import { ProductoComponent } from './producto/producto.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PedidoComponent } from './pedido/pedido.component';
@@ -25,6 +24,9 @@ import { ProductoService } from './producto/productoService';
 import { ListarProductosComponent } from './listar-productos/listar-productos.component';
 import { ProductoSucursalService } from './listar-productos/productoSucursalservice';
 import { ListarProdCatComponent } from './listar-prod-cat/listar-prod-cat.component';
+import { FormasDePagoComponent } from './formas-de-pago/formas-de-pago.component';
+import { FormaDePagoService } from './formas-de-pago/formaDePagoService';
+import { LoginService } from './login/login.service';
  
 
 @NgModule({
@@ -43,7 +45,8 @@ import { ListarProdCatComponent } from './listar-prod-cat/listar-prod-cat.compon
     FooterComponent,
     ErrorComponent,
     ListarProductosComponent,
-    ListarProdCatComponent
+    ListarProdCatComponent,
+    FormasDePagoComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,7 @@ import { ListarProdCatComponent } from './listar-prod-cat/listar-prod-cat.compon
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [SucursalService,LoggingService, DataService, CategoriaService, ProductoService, ProductoSucursalService ],// se añade aqui mi proveedor de mi servicio para no estar añadiendo en cada clase
+  providers: [SucursalService, DataService, CategoriaService, ProductoService, ProductoSucursalService, FormaDePagoService, LoginService],// se añade aqui mi proveedor de mi servicio para no estar añadiendo en cada clase
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,17 +9,22 @@ import { ErrorComponent } from './error/error.component';
 import { ProductoComponent } from './producto/producto.component';
 import { ListarProductosComponent } from './listar-productos/listar-productos.component';
 import { ListarProdCatComponent } from './listar-prod-cat/listar-prod-cat.component';
+import { FormasDePagoComponent } from './formas-de-pago/formas-de-pago.component';
+import { LoginComponent } from './login/login.component';
 
 
 //declaro la variable
 const routes: Routes = [
-  { path: '', component: InicioComponent },
+  { path: '', component: LoginComponent },
   { path: 'Sucursales', component: SucursalesComponent },
   { path: 'categorias', component: CategoriasComponent },
   { path: 'producto', component: ProductoComponent },
   { path: 'producto/:sucursal', component: ListarProductosComponent },
   { path: 'producto/categoria/:sucursal/:categoria', component: ListarProdCatComponent },
-  //  { path: '**', component: ErrorComponent }
+  { path: 'FormasDePago/:nombreUsuario', component: FormasDePagoComponent},
+  { path: 'Inicio', component:InicioComponent}
+
+  // { path: '**', component: ErrorComponent }
 ]
 
 @NgModule({

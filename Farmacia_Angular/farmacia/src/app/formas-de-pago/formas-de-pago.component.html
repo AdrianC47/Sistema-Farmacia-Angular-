@@ -1,0 +1,18 @@
+<app-cabecero></app-cabecero>
+<div id="heading" style="text-align: center">
+  <h1>Listado de Formas de Pago</h1>
+</div>
+
+<div *ngFor="let formaPago of formasDePago; let i = index">
+  <ul>
+    <li>
+      <a> Tipo de Pago: {{ formaPago.TipoPago}}</a>
+      <a> Nombre Titular: {{ formaPago.nombreTitular }}</a>
+      <a> Numero de Tarjeta: {{ formaPago.numeroTarjeta}}$</a>
+      <a> Vuelto: {{ formaPago.vuelto}}</a>
+      <a> Meses: {{ formaPago.meses}}</a>
+    </li>
+  </ul>
+</div>
+
+<app-footer></app-footer>

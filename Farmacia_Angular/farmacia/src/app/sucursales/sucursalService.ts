@@ -1,5 +1,4 @@
 import { Sucursal } from '../sucursal/sucursal.model';
-import { LoggingService } from '../LoggingService.service';
 import { Injectable, EventEmitter } from '@angular/core';
 import { DataService } from '../dataService';
 
@@ -12,7 +11,7 @@ export class SucursalService{
     sucursales: Sucursal[] =[];
  
     
-    constructor(private ServicioLogin: LoggingService, private dataService: DataService) {
+    constructor( private dataService: DataService) {
 
     }
 

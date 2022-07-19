@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
 
+Se plantea el desarrollo de la parte del frontend de un sistema para una Farmacia
+ ng new nombreapp <== Creo un nuevo proyecto ng serve -o <==Inicia el Servidor ng generate component nombreComponente <= Me crea un nuevo componente, la palabra generate se puede reemplazar por g y la de component con c ng g c persona -s -t <= con este codigo creo un componente igual pero tiene la particularidad que con -s la hoja de estilo se genera de manera inline y con -t la plantilla html se genera igual de manera inline npm install bootstrap --save <== Comando para instalar bootstrap npm install jquery --save <== comando para instalar jquery npm install popper.js --save <== comando para instalar popper npm i bootstrap jquery popper.js --save <== manera mas rapida de instalar bootstrap y jquery Si no se tiene la carpeta node modules se instala con <== npm install Generar un nuevo modulo routing <== ng g module app-routing
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

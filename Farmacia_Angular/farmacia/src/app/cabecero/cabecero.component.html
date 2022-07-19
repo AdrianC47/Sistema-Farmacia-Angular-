@@ -1,63 +1,86 @@
 <!DOCTYPE html>
 <!-- <html lang="en"> -->
-  <head>
-    <meta charset="utf-8" />
-    <title>FarmaSama</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="cruz.ico" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i"
-      rel="stylesheet"
-    />
-    <link  href="../../assets/fonts/icomoon/style.css" />
-    <link href="../../assets/css/bootstrap.min.css" />
-    <link href="../../assets/css/magnific-popup.css" />
-    <link href="../../assets/css/jquery-ui.css" />
-    <link href="../../assets/css/owl.carousel.min.css" />
-    <link href="../../assets/css/owl.theme.default.min.css" />
-    <link href="../../assets/css/aos.css" />
-    <link href="../../assets/css/style.css" />
-  </head>
-  <body>
-    <div class="site-wrap">
-      <div class="site-navbar py-2">
-        <div class="search-wrap">
-          <div class="container">
-            <a href="#" class="search-close js-search-close"
-              ><span class="icon-close2"></span
-            ></a>
-            <form action="#" method="post">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Escriba una palabra y presione enter..."
-              />
-            </form>
-          </div>
-        </div>
-
+<head>
+  <meta charset="utf-8" />
+  <title>FarmaSama</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="cruz.ico" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i"
+    rel="stylesheet"
+  />
+  <link href="../../assets/fonts/icomoon/style.css" />
+  <link href="../../assets/css/bootstrap.min.css" />
+  <link href="../../assets/css/magnific-popup.css" />
+  <link href="../../assets/css/jquery-ui.css" />
+  <link href="../../assets/css/owl.carousel.min.css" />
+  <link href="../../assets/css/owl.theme.default.min.css" />
+  <link href="../../assets/css/aos.css" />
+  <link href="../../assets/css/style.css" />
+</head>
+<body>
+  <div class="site-wrap">
+    <div class="site-navbar py-2">
+      <div class="search-wrap">
         <div class="container">
-          <div class="d-flex align-items-center justify-content-between">
-            <div class="logo">
-              <div class="site-logo">
-                <a href="index.html" class="js-logo-clone"
-                  >Farmacia FarmaSama</a
-                >
-              </div>
+          <a href="#" class="search-close js-search-close"
+            ><span class="icon-close2"></span
+          ></a>
+          <form action="#" method="post">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Escriba una palabra y presione enter..."
+            />
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a class="js-logo-clone">Farmacia FarmaSama</a>
             </div>
-            <div class="main-nav d-none d-lg-block">
-              <nav
-                class="site-navigation text-right text-md-center"
-                role="navigation"
-              >
-                <ul class="site-menu js-clone-nav d-none d-lg-block">
-                  <li><a  href="index.html" class="miBoton" >Home</a></li>
-                  <li><a class="miBoton"  (click)=irASucursales()>Sucursales</a></li>
-                 <li><a class="miBoton">Formas de Pago</a></li>
-                  <li><a class="miBoton" (click)=irACategorias()>Categorias</a></li>
-                  <li><a class="miBoton" (click)=irAProductos()>Productos</a></li>  
-                  <!-- <li class="has-children">
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav
+              class="site-navigation text-right text-md-center"
+              role="navigation"
+            >
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a (click)="irAInicio()" class="miBoton">Home</a></li>
+                <li>
+                  <a class="miBoton" (click)="irASucursales()">Sucursales</a>
+                </li>
+                <li>
+                  <a class="miBoton" (click)="irACategorias()">Categorias</a>
+                </li>
+                <li>
+                  <a class="miBoton" (click)="irAProductos()">Productos</a>
+                </li>
+                <li>
+                  <a class="miBoton" (click)="irAFormasDePago()"
+                    >Formas de Pago</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <!-- <a href="#" class="icons-btn d-inline-block js-search-open"
+              ><span class="icon-search"></span
+            ></a> -->
+            <a href="cart.html" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">2</span>
+            </a>
+
+            <a style="margin-left: 15px;"class="miBoton" (click)="irAProductos()">
+              <span class="icon-window-close"></span>
+            </a>
+            <!-- <li class="has-children">
                     <a href="#">Dropdown</a>
                     <ul class="dropdown">
                       <li><a href="#">Supplements</a></li>
@@ -74,39 +97,19 @@
                       <li><a href="#">Tea &amp; Coffee</a></li>
                     </ul>
                   </li> -->
-                </ul>
-              </nav>
-            </div>
-            <div class="icons">
-              <a href="#" class="icons-btn d-inline-block js-search-open"
-                ><span class="icon-search"></span
-              ></a>
-              <a href="cart.html" class="icons-btn d-inline-block bag">
-                <span class="icon-shopping-bag"></span>
-                <span class="number">2</span>
-              </a>
-              <a
-                href="#"
-                class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"
-                ><span class="icon-menu"></span
-              ></a>
-            </div>
           </div>
         </div>
-      </div> 
-
-     
+      </div>
     </div>
-    
- 
-  </body> 
-  
-  <script src="../../assets/js/jquery-3.3.1.min.js"></script>
-  <script src="../../assets/js/jquery-ui.js"></script>
-  <script src="../../assets/js/popper.min.js"></script>
-  <script src="../../assets/js/bootstrap.min.js"></script>
-  <script src="../../assets/js/owl.carousel.min.js"></script>
-  <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="../../assets/js/aos.js"></script>
-  <script src="../../assets/js/main.js"></script>
+  </div>
+</body>
+
+<script src="../../assets/js/jquery-3.3.1.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/jquery-ui.js"></script>
+<script src="../../assets/js/owl.carousel.min.js"></script>
+<script src="../../assets/js/jquery.magnific-popup.min.js"></script>
+<script src="../../assets/js/aos.js"></script>
+<script src="../../assets/js/main.js"></script>
 <!-- </html> -->

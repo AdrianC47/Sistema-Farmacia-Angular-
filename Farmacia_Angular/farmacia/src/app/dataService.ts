@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Subscriber, Observable } from 'rxjs';
 import { Sucursal } from './sucursal/sucursal.model';
+import { Usuario } from "./login/usuario.model";
 
 @Injectable()
 export class DataService {
@@ -18,6 +19,8 @@ export class DataService {
         return this.httpClient.get('http://localhost:8080/categoria');
 
     }
+
+
 
     cargarProductos(): Observable<any> {
         console.log(this.httpClient.get('http://localhost:8080/producto/'))
@@ -37,6 +40,19 @@ export class DataService {
         console.log('sucursal y categoria en get' +sucursal+ categoria)
         return this.httpClient.get('http://localhost:8080/producto/categoria/'+sucursal+'/'+categoria);
     }
+
+    cargarFormasDePago(nombreUsuario:string): Observable<any>{
+        console.log(this.httpClient.get('http://localhost:8080/formasDePago/'+nombreUsuario))
+        console.log('formadePago en get'+nombreUsuario)
+        return this.httpClient.get('http://localhost:8080/formasDePago/'+nombreUsuario);
+    }
+
+    verificarUsuario(usuario:Usuario):Observable<any>{
+        console.log(this.httpClient.post('http://localhost:8080/usuario/iniciarSesion/',usuario));
+        console.log('UsuarioLogin en get'+usuario.usuario + usuario)
+        return this.httpClient.post('http://localhost:8080/usuario/iniciarSesion/',usuario);
+    }
+
     // cargarProductosporSucursal(sucursal:string):Observable<any>{
     //     console.log(this.httpClient.get('http://localhost:8080/producto/'+sucursal))
     //     return this.httpClient.get('http://localhost:8080/producto/'+sucursal);

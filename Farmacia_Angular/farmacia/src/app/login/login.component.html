@@ -1,1 +1,37 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Farmacia FarmaSamma</title>
+</head>
+<div id="heading" style="text-align: center">
+    <h1>Bienvenido a Farmacia FarmaSamma</h1>
+  </div>
+
+    <div class="box">
+      
+        <form  #f="ngForm" (ngSubmit)="f.form.valid && login(f)">
+            <br><br>
+            <h2 style="text-align: center;">Login</h2>
+            <br><br>
+         
+            <div >
+                <input  class="miInput" type="text" name="usuario" placeholder="Ingrese su Usuario" ngModel required  >
+            </div>
+            <br>
+            <div>
+                <input class="miInput"  type="password" name="contrasenia" placeholder="Ingrese su contraseña" ngModel required >
+            </div>
+            <br>
+            <button  type="submit" style="cursor: pointer; width: 137px; margin-bottom: 10px; margin-top: 35px ;">Aceptar</button>
+        </form>
+    </div>
+
+    
+    </html>   
+   
+
+ 
+ 
