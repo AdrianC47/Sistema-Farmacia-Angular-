@@ -3,6 +3,7 @@ import { Sucursal } from '../sucursal/sucursal.model';
 import { Categoria } from './categoria.model';
 import { CategoriaService } from './categoriaService';
 import { SucursalService } from '../sucursales/sucursalService';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categorias',
@@ -17,9 +18,10 @@ export class CategoriasComponent implements OnInit {
   @Input() sucursal: Sucursal;
   @Input() nombreSucursal: string;
 
-  constructor(private categoriaService: CategoriaService, private sucursalService: SucursalService) { }
+  constructor(private categoriaService: CategoriaService, private sucursalService: SucursalService, private router: Router) { }
 
   ngOnInit(): void {
+
     this.categoriaService.obtenerCategorias().subscribe(
       (categorias: Categoria[])=>{
         this.categorias=categorias;
@@ -34,6 +36,15 @@ export class CategoriasComponent implements OnInit {
         console.log("obtener sucursales en las categorias:" + this.sucursales);
       }
     )
+    this.irAInicio()
+  }
+  irAInicio() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.router.navigate([''])
+    } 
+    
   }
  
 

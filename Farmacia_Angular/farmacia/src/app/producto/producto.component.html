@@ -6,11 +6,11 @@
 <div *ngFor="let producto of productos; let i = index">
   <ul>
     <li>
-      <a> ID: {{ producto.id }}</a>
+ 
       <a> Descripcion: {{ producto.descripcion}}</a>
       <a> Nombre: {{ producto.nombre }}</a>
       <a> Precio: {{ producto.precio}}$</a>
-      <a> Categoria ID: {{ producto.categoria.id}}</a>
+      <a> Categoria: {{ producto.categoria.nombre}}</a>
     </li>
   </ul>
 </div>

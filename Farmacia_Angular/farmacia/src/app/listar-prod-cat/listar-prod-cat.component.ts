@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductoSucursal } from '../listar-productos/productos-Sucursal.model';
 import { ProductoSucursalService } from '../listar-productos/productoSucursalservice';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-prod-cat',
@@ -15,7 +15,7 @@ export class ListarProdCatComponent implements OnInit {
   nombreCategoria: string;
   nombreSucursal: string;
 
-  constructor(private productoSucursalService: ProductoSucursalService,  private route: ActivatedRoute) { 
+  constructor(private productoSucursalService: ProductoSucursalService,  private route: ActivatedRoute, private router: Router) { 
 
   }
 
@@ -32,6 +32,14 @@ export class ListarProdCatComponent implements OnInit {
         }
       )
     }
+    this.irAInicio()
+  }
+  irAInicio() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.router.navigate([''])
+    } 
   }
 
 }

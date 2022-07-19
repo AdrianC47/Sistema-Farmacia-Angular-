@@ -3,16 +3,43 @@
   <h1>Listado de Formas de Pago</h1>
 </div>
 
-<div *ngFor="let formaPago of formasDePago; let i = index">
+<!-- <div *ngFor="let formaPago of formasDePago; let i = index">
   <ul>
     <li>
-      <a> Tipo de Pago: {{ formaPago.TipoPago}}</a>
+      <a> Tipo de Pago: {{ formaPago.tipoPago}}</a>
       <a> Nombre Titular: {{ formaPago.nombreTitular }}</a>
       <a> Numero de Tarjeta: {{ formaPago.numeroTarjeta}}$</a>
       <a> Vuelto: {{ formaPago.vuelto}}</a>
       <a> Meses: {{ formaPago.meses}}</a>
     </li>
   </ul>
+</div> -->
+
+
+<div class="credit-card-wrap"  >
+	<div class="mk-icon-world-map"></div>
+	<div class="credit-card-inner">
+ 
+			<div class="credit-logo">
+				<div class="shape"><span class="txt">PB</span></div> <span class="text">Farma Sama</span>
+			</div>
+ 
+		<div class="mk-icon-sim"></div>
+		<div class="credit-font credit-card-number" data-text="001" *ngFor="let model of formasDePago">{{model.numeroTarjeta}}</div>
+		<footer class="footer">
+			<div class="clearfix">
+				<div class="pull-left">
+					<div class="credit-card-date"><span class="title">Tipo de Tarjeta</span>
+            <span class="credit-font" *ngFor="let model of formasDePago">{{model.tipoPago}}</span></div>
+					<div class="credit-font credit-author" *ngFor="let model of formasDePago">{{model.nombreTitular}}</div>
+				</div>
+				<div class="pull-right">
+					<div class="mk-icon-visa"></div>
+				</div>
+			</div>
+		</footer>
+	</div>
 </div>
+<hr>
 
 <app-footer></app-footer>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Producto } from './producto.model';
 import { ProductoService } from './productoService';
 
@@ -13,9 +14,10 @@ export class ProductoComponent implements OnInit {
   @Input() producto: Producto;
   @Input() indice: number;
 
-  constructor(private ProductoService: ProductoService) { }
+  constructor(private ProductoService: ProductoService,private router: Router) { }
 
   ngOnInit(): void {
+
     this.ProductoService.obtenerProductos().
     subscribe(
       (productos: Producto[])=>{
@@ -24,6 +26,16 @@ export class ProductoComponent implements OnInit {
         console.log("obtener productos por sucursal "+ this.productos);
       }
     )
+    
+    this.irAInicio()
+  }
+
+  irAInicio() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.router.navigate([''])
+    }  
   }
 
 }

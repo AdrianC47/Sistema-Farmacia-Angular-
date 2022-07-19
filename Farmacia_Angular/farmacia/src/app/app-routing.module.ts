@@ -22,9 +22,9 @@ const routes: Routes = [
   { path: 'producto/:sucursal', component: ListarProductosComponent },
   { path: 'producto/categoria/:sucursal/:categoria', component: ListarProdCatComponent },
   { path: 'FormasDePago/:nombreUsuario', component: FormasDePagoComponent},
-  { path: 'Inicio', component:InicioComponent}
+  { path: 'Inicio', component:InicioComponent},
 
-  // { path: '**', component: ErrorComponent }
+  { path: '**', component: ErrorComponent }
 ]
 
 @NgModule({

@@ -7,23 +7,63 @@ import { Router } from '@angular/router';
   styleUrls: ['./cabecero.component.css']
 })
 export class CabeceroComponent implements OnInit {
- 
-  constructor(private router:Router) { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-  
-  }
 
-  irASucursales(){this.router.navigate(["Sucursales"])}
-  irACategorias(){this.router.navigate(["categorias"])}
-  irAProductos(){this.router.navigate(["producto"])}
-  irAFormasDePago(){
-
-    let usuario= sessionStorage.getItem('Usuario');
-    this.router.navigate(["FormasDePago",usuario])
   }
-  irAInicio(){this.router.navigate(["Inicio"])}
-  CerrarSesion(){
+  irALogin() { this.router.navigate([""]) }
+
+
+  irAInicio() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.irALogin()
+    }  else {
+    this.router.navigate(["Inicio"])
+    }
+  }
+  irASucursales() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.irALogin()
+    } else {
+      this.router.navigate(["Sucursales"])
+    }
+  }
+  irACategorias() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.irALogin()
+    } else {
+      this.router.navigate(["categorias"])
+    }
+  }
+  irAProductos() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.irALogin()
+    } else { 
     this.router.navigate(["producto"])
+    }
+  }
+  irAFormasDePago() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.irALogin()
+    } else { 
+    this.router.navigate(["FormasDePago", usuario])
+    }
+  }
+
+  CerrarSesion() {
+    sessionStorage.removeItem('Usuario')
+    this.router.navigate([""])
   }
 }

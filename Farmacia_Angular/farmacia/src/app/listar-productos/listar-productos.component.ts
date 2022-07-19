@@ -14,19 +14,28 @@ export class ListarProductosComponent implements OnInit {
   @Input() producto: ProductoSucursal;
   nombreSucursal: string;
   index: number;
-  constructor(private productoSucursalService: ProductoSucursalService,  private route: ActivatedRoute) { }
+  constructor(private productoSucursalService: ProductoSucursalService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+
     this.nombreSucursal = this.route.snapshot.params['sucursal']
     if (this.nombreSucursal != null) {
       this.productoSucursalService.obtenerProductosSucursal(this.nombreSucursal).subscribe(
-        (productos: ProductoSucursal[])=>{
-          this.productos=productos;
+        (productos: ProductoSucursal[]) => {
+          this.productos = productos;
           this.productoSucursalService.setProductosSucursal(this.productos);
           console.log('lo has logrado?' + this.productos);
         }
       )
     }
+    this.irAInicio()
+  }
+  irAInicio() {
+    let usuario = sessionStorage.getItem('Usuario');
+    if (usuario == null) {
+      alert('No existe un usuario')
+      this.router.navigate([''])
     }
- 
+  }
+
 }
