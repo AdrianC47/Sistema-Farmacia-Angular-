@@ -5,5 +5,5 @@ FROM node:16.14.2
 RUN npm cache clean
 RUN npm install
 #COPY . /usr/src/app
-EXPOSE 4200
-CMD ["npm","start"]
+#EXPOSE 4200
+#CMD ["npm","start"]
