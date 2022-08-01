@@ -4,6 +4,6 @@ FROM node:16.14.2
 # COPY package.json /usr/src/app
 RUN npm cache clean
 RUN npm install
-COPY . /usr/src/app
+#COPY . /usr/src/app
 EXPOSE 4200
 CMD ["npm","start"]
